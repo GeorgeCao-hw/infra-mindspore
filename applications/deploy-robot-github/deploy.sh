@@ -125,7 +125,9 @@ gen_deploy_yaml(){
     mkdir $bot
     cd $bot
 
-    cp -r ../../deploy-robot-github/template/. .
+    cp -r ../../deploy-robot-github/configmap.yaml .
+    cp -r ../../deploy-robot-github/deployment.json .
+    cp -r ../../deploy-robot-github/kustomization.yaml .
 
     # must mark ./* in ""
     replace $ph_component $bot "./*"
